@@ -40,6 +40,7 @@ Open your browser and visit http://localhost:3000 to view the app.
 
 ## Demo
 ![simple_wall](/screenshots/simple_wall.png?raw=true "simple_wall")
+https://github.com/hari01584/anime-wall/assets/31770598/6f044457-85ad-40e7-a4da-cd3e1306d695
 
 ## Contributing
 Contributions are welcome! Feel free to submit issues and pull requests.

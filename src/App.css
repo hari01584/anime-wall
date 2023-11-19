@@ -1,0 +1,197 @@
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.my-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: #200122;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.my-header > img {
+  height: 70px;
+  width: 70px;
+  margin: 8px;
+  margin-left: 16px;
+}
+
+.my-header > h1 {
+  font-family: Roboto;
+  font-size: x-large;
+  color: #FFFFFF; /* Set the text color to white or a contrasting color */
+  font-size: 24px; /* Adjust the font size as needed */
+  text-shadow: 4px 4px 5px #FF5722; /* Add a subtle text shadow for depth */
+  margin-left: 8px; /* Remove default margin to ensure a clean look */
+}
+
+
+.search-bar-container {
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar {
+  width: 80%;
+  max-width: 600px;
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 0 25px 25px 0;
+}
+
+/* .anime-character-card-image > img {
+  max-height: 300px;
+} */
+
+#cards-container {  
+  position: relative;  
+  -webkit-column-count: 7;    
+  -webkit-column-gap: 0px;    
+  -moz-column-count: 7;
+  -moz-column-gap: 0px;
+  column-count: 7;    
+  column-gap: 4px;    
+}  
+#cards-container img {    
+  width: 100% !important;    
+  height: auto !important;  
+}  
+#cards-container{    
+  display:inline-block;    
+  margin-right: auto;    
+  margin-left: auto;  
+}
+
+.card {
+  transform-style: preserve-3d;
+  transition: 150ms;
+  cursor: pointer;
+  transform: perspective(1000px) rotateY(var(--rotate-y, 0deg)) translateY(var(--translate-y, 0px));
+}
+
+.card:hover {
+  --rotate-y: -10deg;
+  --translate-y: -10px;
+}
+
+.card.flip {
+  --rotate-y: -180deg;
+}
+
+.card-flip-container {
+  position: relative;
+}
+
+.card-front, .card-back {
+  backface-visibility: hidden;
+  /* position: fixed; */
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0); */
+}
+
+.card-front {
+  left: 0;
+  overflow:hidden;
+}
+
+.card-back {
+  position: fixed;
+  /* top: 50%; */
+  /* left: 50%; */
+  top: 0%;
+  right: 0%;
+  height: 100%;
+  width: 100%;
+  transform: translate(-50%, 0);
+  transform: rotateY(180deg);
+}
+
+.backcard-data {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  justify-content: flex-start;
+  align-content: start;
+  height: 100%;
+  width: 100%;
+  border: black solid 1px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+.backcard-data > .character-title {
+  font-family: 'Agbalumo';
+  font-size: medium;
+}
+
+.backcard-data > .character-summary {
+  font-family: 'Roboto';
+  font-size: small;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+
+  display: inline-block;
+}
